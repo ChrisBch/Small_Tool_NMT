@@ -11,15 +11,23 @@ ChnTag = []
 ChnWord = []
 EngWord = []
 
-os.environ["JAVA_HOME"] = "C:\Program Files\Java\jre1.8.0_171" 
-os.environ["CLASSPATH"] = "D:\StanfordNLP\jars"
-os.environ["STANFORD_MODELS"] = "D:\StanfordNLP\models"
+#you can choose your own environment of Stanford Tools
+#e.g. os.environ["JAVA_HOME"] = "C:\Program Files\Java\jre1.8.0_171" 
+#os.environ["CLASSPATH"] = "D:\StanfordNLP\jars"
+#os.environ["STANFORD_MODELS"] = "D:\StanfordNLP\models"
+
+os.environ["JAVA_HOME"] = "Path to Java" 
+os.environ["CLASSPATH"] = "Path to StanfordTools\jars"
+os.environ["STANFORD_MODELS"] = "Path to StanfordTools\models"
 
 eng_tagger = StanfordPOSTagger('english-bidirectional-distsim.tagger')
 chn_tagger = StanfordPOSTagger('chinese-distsim.tagger')
 
-with open (r"F:\AllTag\chn_eng_train.zh.txt","r",encoding="utf-8_sig") as ChnReader,open (r"F:\AllTag\chn_eng_train.en.txt","r",encoding="utf-8_sig") as EngReader,\
-     open (r"F:\AllTag\tage_tagc_train.tagc.txt","w",encoding="utf-8_sig") as ChnWriter,open (r"F:\AllTag\tage_tagc_train.tage.txt","w",encoding="utf-8_sig") as EngWriter :
+#enter the path to your corpus and tag corpus
+#e.g. r"F:\AllTag\chn_eng_train.zh.txt"
+
+with open ("path to chinese corpus","r",encoding="utf-8_sig") as ChnReader,open ("path to english corpus","r",encoding="utf-8_sig") as EngReader,\
+     open ("path to save word@tag in chinese","w",encoding="utf-8_sig") as ChnWriter,open ("path to save word@tag in english","w",encoding="utf-8_sig") as EngWriter :
      for index,line in enumerate(ChnReader):
           Temp = []
           list1 = chn_tagger.tag(line.split())
