@@ -1,4 +1,16 @@
-# Small_Tool_seq2seq
+# Small_Tool_NMT
+
+Author: ChenHan Yuan (Chris Yuan)
+
+this project includes some codes that may be useful for people who want to prepare corpus and train models in NMT.
+********************************************************************************************************************
+if you have any question about this project or want to do some interesting things with me, please contact with me :)
+
+Email: 
+
+chris.yuan.ece@gmail.com  
+yuanchenhan.ece@qq.com (if you want to contact me immediately)
+*********************************************************************************************************************
 
 The Script file is a bash script which can excute in Ubuntu16.04, and it include command line which will give a little help to
 enter commands in Google's seq2seq model. 
