@@ -32,7 +32,7 @@ with open (r"path to chinese corpus","r",encoding="utf-8_sig") as ChnReader,open
     for index,line in enumerate(EngReader):
         print(index)
         list2 = eng_tagger.tag(line.split())
-        for sets in  list1:
+        for sets in  list2:
             if sets[0]==',' or sets[0]==':' or sets[0]=='(' or sets[0]==')' or sets[0]=='/' or sets[0]=='-':
                 if "PU" not in EngTag:
                     EngTag.append("PU")
