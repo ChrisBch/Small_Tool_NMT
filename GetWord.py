@@ -1,5 +1,10 @@
 # -*- coding: UTF-8 -*-
-with open (r"F:\AllTag\chn_eng_train.zh.txt","r",encoding="utf-8_sig") as ChnReader,open (r"F:\AllTag\chn_eng_train.en.txt","r",encoding="utf-8_sig") as EngReader:
+
+#enter the path to your corpus that you want to tag
+#e.g. r"F:\AllTag\chn_eng_train.zh.txt"
+#r"F:\AllTag\chn_eng_train.en.txt"
+
+with open (r"path to chinese corpus","r",encoding="utf-8_sig") as ChnReader,open (r"path to english corpus","r",encoding="utf-8_sig") as EngReader:
     ChnWord = []
     EngWord = []
     for index,line in enumerate(ChnReader):
