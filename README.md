@@ -12,10 +12,10 @@ chris.yuan.ece@gmail.com
 yuanchenhan.ece@qq.com (if you want to contact me immediately)
 *********************************************************************************************************************
 
-The Script file is a bash script which can excute in Ubuntu16.04, and it include command line which will give a little help to
-enter commands in Google's seq2seq model. 
-(BTW, if you can't excute the script because of "source" command line, you can use "sudo dpkg-reconfigure dash" to shut down dash and maybe this will help )
+10-fold_crossValidation.py can  generate the number of rows of the input text randomly which are required for 10-fold cross-validation.
 
-GetWord.py can extract words from text and output it in a specified directory
+GetWord.py can extract all words from the input text without repeating.
 
-GetWordVer2.py can extract words from text and sort them according to frequency of occurrence, outputting them in the specified directory
+GetTag.py can use Stanford Tagger to generate all POS in the input text without repeating
+
+Word@Tag.py can number all words and tags and replace the sentences in the input text with the form "word@tag".(this program need the data which is generated from GetWord.py and GetTag.py).
